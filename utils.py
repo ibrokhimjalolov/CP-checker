@@ -5,7 +5,6 @@ from conf import *
 def compile():
     command = 'g++ -o ' + os.path.join(LAB_DIR, 'a.exe') + ' ' + SOURCE_FILE
     result = subprocess.run(command, shell=True)
-    print(result)
     return result.returncode == 0
 
 

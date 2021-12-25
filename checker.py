@@ -3,10 +3,7 @@ from utils import (compile,
                    get_testcases, 
                    generate_output_file_name,
                    run_on_test)
-from conf import (IO_DIR_NAME, 
-                  LAB_DIR, 
-                  SOURCE_FILE, 
-                  LOG_FILE)
+from conf import SOURCE_FILE
 import logging
 
 
@@ -14,7 +11,7 @@ logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
 logging.info('Compiling ' + SOURCE_FILE)
 return_code = compile()
-print(return_code)
+
 if return_code == False:
     logging.info('CompilationError ')
     exit(0)
